@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script href="assets/js/script.js"></script> 
+  <script src="assets/js/script.js" defer></script>
   <title>Ciberseguridad</title>
 </head>
 <body>
@@ -173,5 +173,80 @@
   </div>
 </div>
 
+<!-- Test -->
+  <div class="text-center my-5">
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#testModal">
+      Pon a Prueba tu Seguridad
+    </button>
+  </div>
+
+  <!-- Modal Test -->
+  <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel">Test de Seguridad Básico</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="quizForm">
+            <!-- Pregunta 1 -->
+            <div class="mb-4">
+              <p class="fw-semibold">1. ¿Cuál es una señal típica de un correo de phishing?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                <label class="form-check-label" for="q1a">Saludo personalizado con tu nombre real.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                <label class="form-check-label" for="q1b">Solicita datos personales de forma urgente.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                <label class="form-check-label" for="q1c">Viene desde un dominio oficial verificado.</label>
+              </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="mb-4">
+              <p class="fw-semibold">2. ¿Cuál es la principal función de un antivirus?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+                <label class="form-check-label" for="q2a">Cambiar tus contraseñas regularmente.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+                <label class="form-check-label" for="q2b">Realizar copias de seguridad automáticas.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+                <label class="form-check-label" for="q2c">Detectar y eliminar software malicioso.</label>
+              </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="mb-4">
+              <p class="fw-semibold">3. ¿Qué debes hacer con un enlace desconocido recibido por correo?</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+                <label class="form-check-label" for="q3a">No hacer clic y verificar su legitimidad.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+                <label class="form-check-label" for="q3b">Hacer clic para ver de qué se trata rápidamente.</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+                <label class="form-check-label" for="q3c">Reenviarlo a tus contactos para preguntarles.</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar Respuestas</button>
+          </form>
+          <div id="quizResult" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
